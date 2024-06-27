@@ -1,10 +1,9 @@
 from app.models.base import SessionLocal
 from app.crud.recomendations import get_recomendations_from_db
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, status
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
-import json
 
 router = APIRouter()
 
