@@ -1,4 +1,5 @@
 from app.crud.categories import create_category_in_db
+from app.endpoints.description import create_category_description
 from app.models.base import SessionLocal
 from app.schemas.categories import CategorySchema
 from fastapi import APIRouter, Depends, status
@@ -15,7 +16,7 @@ def get_db():
     finally:
         db.close()
 
-@router.post("/create_category")
+@router.post("/create_category", description=create_category_description)
 def create_category(category: CategorySchema, db: Session = Depends(get_db)):
     return JSONResponse(
         jsonable_encoder(create_category_in_db(category=category, db=db)),

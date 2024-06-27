@@ -5,10 +5,13 @@ from app.endpoints.recomendations import router as recomendations_router
 from app.models.base import Base, engine
 from fastapi import FastAPI
 
+# Create the tables in the DB
 Base.metadata.create_all(bind=engine)
 
+# "Initialize the application"
 app = FastAPI()
 
+# Include the router for related routes
 app.include_router(location_router, prefix="/api/v1")
 app.include_router(category_router, prefix="/api/v1")
 app.include_router(reviwed_router, prefix="/api/v1")
