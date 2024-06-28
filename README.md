@@ -23,7 +23,7 @@ git clone https://github.com/brian-1989/Orbidi_project.git
 
 ### **Create and Activate a Virtual Environment**
 ```bash
-python -m venv env
+python -m venv venv
 source env/bin/activate
 ```
 
