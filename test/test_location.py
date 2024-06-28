@@ -1,15 +1,18 @@
 from app.main import app
+from decimal import Decimal
 from fastapi import status
 from fastapi.testclient import TestClient
 import random
-from decimal import Decimal
+
 
 def generate_random_coordinates():
     latitude = Decimal(random.uniform(-90.0, 90.0))
     longitude = Decimal(random.uniform(-180.0, 180.0))
     return format(latitude, ".4f"), format(longitude, ".4f")
 
+
 client = TestClient(app)
+
 
 def test_create_location():
     lat_long = generate_random_coordinates()
@@ -24,6 +27,7 @@ def test_create_location():
     assert response.status_code == status.HTTP_201_CREATED
     assert response.json()["latitude"] == location_data["latitude"]
     assert response.json()["longitude"] == location_data["longitude"]
+
 
 def test_create_location_invalid_values():
     invalid_location_data = {"latitude": "invalid", "longitude": "invalid"}
