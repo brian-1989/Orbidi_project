@@ -10,7 +10,7 @@ The Orbidi project is a web application developed with FastAPI. It allows users 
 4. [Models](#models)
 5. [Autor](#autor)
 
-## **Installation** :wrench:
+## **Installation**
 
 ### **Prerequisites**
 - Python 3.9+
@@ -181,5 +181,3 @@ Define a model for storing information about reviewed location categories.
 ## **Autor**
 :man_technologist: **Brian Zapata**
 * [LinkedIn](https://www.linkedin.com/in/briayan-zapata/)
-
-

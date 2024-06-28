@@ -7,7 +7,8 @@ from sqlalchemy.orm import Session
 
 def create_location_in_db(location: LocationSchema, db: Session):
     try:
-        db_location = Location(latitude=location.latitude, longitude=location.longitude)
+        db_location = Location(latitude=location.latitude,
+                               longitude=location.longitude)
         db.add(db_location)
         db.commit()
         db.refresh(db_location)
