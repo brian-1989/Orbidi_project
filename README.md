@@ -19,15 +19,24 @@ The Orbidi project is a web application developed with FastAPI. It allows users 
 ### Clone the repository
 ```bash
 git clone https://github.com/brian-1989/Orbidi_project.git
+cd Orbidi_project/
 ```
 
 ### **Create and Activate a Virtual Environment**
 ```bash
 python -m venv venv
-source env/bin/activate
+source venv/bin/activate
+```
+
+### **Install Dependencies**
+```bash
+pip install -r requirements.txt
 ```
 
 ## **Use**
+
+### **File .env**
+Add the .env file, which stores the database credentials. This file was sent to the senders' email for the test. If you like, you can also write to the developer of the test. The data is in the author.
 
 ### **Run the application**
 ```bash
