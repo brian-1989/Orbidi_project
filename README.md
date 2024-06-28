@@ -1,38 +1,38 @@
 # **Orbidi Project**
 
-## **Descripción**
+## **Description**
 ---
-El proyecto Orbidi es una aplicación web desarrollada con FastAPI. Permite a los usuarios añadir nuevas ubicaciones y categorías, además de ofrecer recomendaciones para explorar lugares. Estas recomendaciones priorizan los lugares que nunca han sido visitados y aquellos que no han sido visitados en los últimos 30 días.
+The Orbidi project is a web application developed with FastAPI. It allows users to add new locations and categories, as well as offering recommendations for exploring places. These recommendations prioritize locations that have never been visited and those that have not been visited in the last 30 days.
 
-## **Tabla de Contenidos**
+## **Table of Contents**
 ---
-1. [Instalación](#Instalación)
-2. [Uso](#uso)
+1. [Installation](#instalación)
+2. [Use](#use)
 3. [Endpoints](#endpoints)
-4. [Modelos](#modelos)
-5. [Contribuir](#contribuir)
+4. [Models](#models)
+5. [To contribute](#to contribute)
 
-## **Instalación**
+## **Installation**
 ---
 
-### **Prerrequisitos**
+### **Prerequisites**
 - Python 3.9+
 - Git
 
-### Clonar el repositorio
+### Clone the repository
 ```bash
 git clone https://github.com/brian-1989/Orbidi_project.git
 ```
 
-### **Crear y Activar un Entorno Virtual**
+### **Create and Activate a Virtual Environment**
 ```bash
 python -m venv env
 source env/bin/activate
 ```
 
-## **Uso**
+## **Use**
 ---
-### **Ejecutar la aplicación**
+### **Run the application**
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -42,10 +42,13 @@ uvicorn app.main:app --reload
 ### - **Create Location**
 1. **Descripción:**
 This endpoint creates a new location in the database using the provided latitude and longitude values.
+
 2. **Path:**
 /api/v1/create_location
+
 3. **Http Method:**
 POST
+
 4. **Usage Example:**
     ```python
     # Request to create a new location with latitude 40.7128 and longitude -74.0060
@@ -55,6 +58,7 @@ POST
     )
     # Expected output: JSON response with the newly created location data and status code 201.
     ```
+
 ### - **Create Category**
 1. **Descripción:**
 This endpoint creates a new category in the database using the provided category information, containing the name of the place for the new category.
