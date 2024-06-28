@@ -9,12 +9,14 @@ from sqlalchemy.orm import Session
 
 router = APIRouter()
 
+
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+
 
 @router.post("/create_category", description=create_category_description)
 def create_category(category: CategorySchema, db: Session = Depends(get_db)):

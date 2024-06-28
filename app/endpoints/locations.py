@@ -9,12 +9,14 @@ from sqlalchemy.orm import Session
 
 router = APIRouter()
 
+
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+
 
 @router.post("/create_location", description=create_location_description)
 def create_location(location: LocationSchema, db: Session = Depends(get_db)):

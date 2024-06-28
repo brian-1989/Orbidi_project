@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 
 router = APIRouter()
 
+
 def get_db():
     db = SessionLocal()
     try:
@@ -15,7 +16,8 @@ def get_db():
     finally:
         db.close()
 
-@router.get("/get_recomendations", response_model=list[dict], description=get_recomendation_description)
+
+@router.get("/get_recomendations", description=get_recomendation_description)
 def get_recomendations(db: Session = Depends(get_db)):
     return JSONResponse(
         jsonable_encoder(get_recomendations_from_db(db=db)),
