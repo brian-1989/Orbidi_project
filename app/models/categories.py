@@ -7,4 +7,4 @@ class Category(Base):
     __table_args__ = {'schema': 'public'}
 
     id = Column(Integer, primary_key=True, index=True, nullable=False)
-    place_name = Column(String(20), unique=True, nullable=False)
+    place_name = Column(String(100), unique=True, nullable=False)

@@ -1,6 +1,6 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class LocationSchema(BaseModel):
-    latitude: float
-    longitude: float
+    latitude: str = Field(max_length=15)
+    longitude: str = Field(max_length=15)

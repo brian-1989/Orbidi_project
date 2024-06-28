@@ -1,5 +1,5 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class CategorySchema(BaseModel):
-    place_name: str
+    place_name: str = Field(max_length=100)
