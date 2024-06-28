@@ -21,4 +21,3 @@ def create_location(location: LocationSchema, db: Session = Depends(get_db)):
     return JSONResponse(
         jsonable_encoder(create_location_in_db(location=location, db=db)),
         status_code=status.HTTP_201_CREATED)
-
